@@ -17,10 +17,10 @@ class Productos extends CI_Controller{
         $resultado = $this->ProductoModel->guardarCambios(
             $this->input->post("id"),
             $this->input->post("codigo"),
-            $this->input->post("descripcion"),
-            $this->input->post("precioVenta"),
-            $this->input->post("precioCompra"),
-            $this->input->post("existencia")
+            $this->input->post("producto"),
+            $this->input->post("precio_venta"),
+            $this->input->post("precio_compra"),
+            $this->input->post("stock")
         );
         if($resultado){
             $mensaje = "Producto actualizado correctamente";

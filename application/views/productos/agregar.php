@@ -9,17 +9,17 @@
 		<label for="codigo">Código de barras:</label>
 		<input class="form-control" name="codigo" required type="text" id="codigo" placeholder="Escribe el código">
 
-		<label for="descripcion">Descripción:</label>
-		<textarea required id="descripcion" name="descripcion" cols="30" rows="5" class="form-control"></textarea>
+		<label for="producto">Producto:</label>
+		<textarea required id="producto" name="producto" cols="30" rows="5" class="form-control"></textarea>
 
-		<label for="precioVenta">Precio de venta:</label>
-		<input class="form-control" name="precioVenta" required type="number" id="precioVenta" placeholder="Precio de venta">
+		<label for="precio_venta">Precio de venta:</label>
+		<input class="form-control" name="precio_venta" required type="number" id="precio_venta" placeholder="Precio de venta">
 
-		<label for="precioCompra">Precio de compra:</label>
-		<input class="form-control" name="precioCompra" required type="number" id="precioCompra" placeholder="Precio de compra">
+		<label for="precio_compra">Precio de compra:</label>
+		<input class="form-control" name="precio_compra" required type="number" id="precio_compra" placeholder="Precio de compra">
 
-		<label for="existencia">Existencia:</label>
-		<input class="form-control" name="existencia" required type="number" id="existencia" placeholder="Cantidad o existencia">
+		<label for="stock">Stock:</label>
+		<input class="form-control" name="stock" required type="number" id="stock" placeholder="Cantidad o existencia">
 		<br><br><input class="btn btn-info" type="submit" value="Guardar">
 	</form>
 </div>
