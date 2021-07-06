@@ -9,7 +9,7 @@
             <thead>
                 <tr>
                     <th>Código</th>
-                    <th>Descripción</th>
+                    <th>Producto</th>
                     <th>Cantidad</th>
                     <th>Precio</th>
                     <th>Total</th>
@@ -19,7 +19,7 @@
                 <?php foreach($venta->productos as $producto){ ?>
                 <tr>
                     <td><?php echo $producto->codigo ?></td>
-                    <td><?php echo $producto->descripcion ?></td>
+                    <td><?php echo $producto->producto ?></td>
                     <td><?php echo $producto->cantidad ?></td>
                     <td><?php echo $producto->precio ?></td>
                     <td><?php echo $producto->cantidad * $producto->precio ?></td>

@@ -24,7 +24,7 @@ class VentaModel extends CI_model{
 
     private function productosVendidosDeUnaVenta($idVenta){
         return $this->db
-        ->select("productos.descripcion, productos.codigo, productos_vendidos.precio, productos_vendidos.cantidad")
+        ->select("productos.producto, productos.codigo, productos_vendidos.precio, productos_vendidos.cantidad")
         ->from("productos")
         ->join("productos_vendidos", "productos_vendidos.id_producto = productos.id")
         ->where("productos_vendidos.id_venta", $idVenta)

@@ -27,7 +27,7 @@
 				<ul class="nav navbar-nav">
 					<li><a href=" <?php echo base_url(); ?>index.php/productos/">Productos</a></li>
 					<li><a href=" <?php echo base_url(); ?>index.php/vender/">POS</a></li>
-					<!--<li><a href=" <?php echo base_url(); ?>index.php/ventas/">Ventas Realizadas</a></li>-->
+					<li><a href=" <?php echo base_url(); ?>index.php/ventas/">Ventas Realizadas</a></li>
 				</ul>
 			</div>
 		</div>
