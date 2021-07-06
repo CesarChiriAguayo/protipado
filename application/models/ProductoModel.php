@@ -12,10 +12,10 @@
             $this->load->database();
         }
 
-        public function nuevo($codigo, $descripcion, $precio_venta, $precio_compra, $stock){
+        public function nuevo($codigo, $producto, $descripcion, $precio_venta, $precio_compra, $stock){
             $this->codigo = $codigo;
             $this->producto = $producto;
-            $this->descripcion = 'descripción aca';
+            $this->descripcion = $descripcion;
             $this->precio_venta = $precio_venta;
             $this->precio_compra = $precio_compra;
             $this->stock = $stock;
