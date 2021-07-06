@@ -2,10 +2,11 @@
     class ProductoModel extends CI_Model{
         public $id;
         public $codigo;
+        public $producto;
         public $descripcion;
-        public $precioVenta;
-        public $precioCompra;
-        public $existencia;
+        public $precio_venta;
+        public $precio_compra;
+        public $stock;
 
         public function __construct(){
             $this->load->database();
@@ -21,13 +22,14 @@
             return $this->db->insert('productos', $this);
         }
 
-        public function guardarCambios($id, $codigo, $descripcion, $precioVenta, $precioCompra, $existencia){
+        public function guardarCambios($id, $codigo, $producto, $descripcion, $precio_venta, $precio_compra, $stock){
             $this->id = $id;
             $this->codigo = $codigo;
+            $this->producto = $producto;
             $this->descripcion = $descripcion;
-            $this->precioVenta = $precioVenta;
-            $this->precioCompra = $precioCompra;
-            $this->existencia = $existencia;
+            $this->precioVenta = $precio_venta;
+            $this->precioCompra = $precio_compra;
+            $this->stock = $stock;
             return $this->db->update('productos', $this, array("id" => $id));
         }
 
