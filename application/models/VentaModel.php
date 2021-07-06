@@ -55,7 +55,7 @@ class VentaModel extends CI_model{
             $detalleDeProductoVendido = array(
                 "id_producto" => $producto->id,
                 "cantidad" => $producto->cantidad,
-                "precio" => $producto->precioVenta,
+                "precio" => $producto->precio_venta,
                 "id_venta" => $idVenta,
             );
             $this->db->insert("productos_vendidos", $detalleDeProductoVendido);
