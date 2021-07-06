@@ -27,8 +27,8 @@
             $this->codigo = $codigo;
             $this->producto = $producto;
             $this->descripcion = $descripcion;
-            $this->precioVenta = $precio_venta;
-            $this->precioCompra = $precio_compra;
+            $this->precio_venta = $precio_venta;
+            $this->precio_compra = $precio_compra;
             $this->stock = $stock;
             return $this->db->update('productos', $this, array("id" => $id));
         }

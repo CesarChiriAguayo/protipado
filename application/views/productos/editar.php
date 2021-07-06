@@ -12,10 +12,10 @@
 		<textarea required id="descripcion" name="descripcion" cols="30" rows="5" class="form-control"><?php echo $producto->descripcion ?></textarea>
 
 		<label for="precio_venta">Precio de venta:</label>
-		<input value="<?php echo $producto->precio_venta ?>" class="form-control" name="precio_venta" required type="number" id="precioVenta" placeholder="Precio de venta">
+		<input value="<?php echo $producto->precio_venta ?>" class="form-control" name="precio_venta" required type="number" id="precio_venta" placeholder="Precio de venta">
 
 		<label for="precio_compra">Precio de compra:</label>
-		<input value="<?php echo $producto->precio_compra ?>" class="form-control" name="precio_compra" required type="number" id="precioCompra" placeholder="Precio de compra">
+		<input value="<?php echo $producto->precio_compra ?>" class="form-control" name="precio_compra" required type="number" id="precio_compra" placeholder="Precio de compra">
 
 		<label for="stock">Stock:</label>
 		<input value="<?php echo $producto->stock ?>" class="form-control" name="stock" required type="number" id="existencia" placeholder="Cantidad o existencia">
