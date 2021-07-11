@@ -15,25 +15,35 @@
 </head>
 <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="<?php echo base_url(); ?>">SAWERS SRL</a>
+			<div class="navbar2">
+				<a class="subnavbtn2" href="<?php echo base_url(); ?>">SAWERS SRL</a>
+				<?php if(!isset($_SESSION["idusuario"])):?>
+					<a href=" <?php echo base_url(); ?>index.php/Login/registrar">Registro</a>
+					<a href=" <?php echo base_url(); ?>index.php/Login">Iniciar Sesión</a>
+				<?php else:?>
+  					<div class="subnav2">
+    					<button class="subnavbtn2">VENTAS <i class="fa fa-caret-down"></i></button>
+    					<div class="subnav-content2">
+							<a href=" <?php echo base_url(); ?>index.php/vender/">POS</a>
+							<a href=" <?php echo base_url(); ?>index.php/ventas/">Ventas Realizadas</a>
+    					</div>
+  					</div>
+					<div class="subnav2">
+    					<button class="subnavbtn2">PRODUCTOS <i class="fa fa-caret-down"></i></button>
+    					<div class="subnav-content2">
+							<a href=" <?php echo base_url(); ?>index.php/productos/">Productos</a>
+    					</div>
+  					</div>
+					<div class="subnav2">
+    					<button class="subnavbtn2">ADMINISTRAR <i class="fa fa-caret-down"></i></button>
+    					<div class="subnav-content2">
+							<a href=" <?php echo base_url(); ?>index.php/Login/editarUsuario">Mi Perfil</a>
+							<a href=" <?php echo base_url(); ?>index.php/Login/editarUsuario">Lista de Usuarios</a>
+    					</div>
+  					</div>
+					<a class="subnavbtn2 orange" href=" <?php echo base_url(); ?>index.php/Login/cerrarSesion">Cerrar Sesión</a>
+  				<?php endif;?>
 			</div>
-			<div id="navbar" class="collapse navbar-collapse">
-				<ul class="nav navbar-nav">
-					<?php if(!isset($_SESSION["idusuario"])):?>
-						<li><a href=" <?php echo base_url(); ?>index.php/inicio/register">Registro</a></li>
-						<li><a href=" <?php echo base_url(); ?>index.php/Login">Iniciar Sesión</a></li>
-					<?php else:?>
-						<li><a href=" <?php echo base_url(); ?>index.php/productos/">Productos</a></li>
-						<li><a href=" <?php echo base_url(); ?>index.php/vender/">POS</a></li>
-						<li><a href=" <?php echo base_url(); ?>index.php/ventas/">Ventas Realizadas</a></li>
-						<li><a href=" <?php echo base_url(); ?>index.php/ventas/">Configurar</a></li>
-						<li><a href=" <?php echo base_url(); ?>index.php/Login/cerrarSesion">Cerrar Sesión</a></li>
-					<?php endif;?>
-				</ul>
-			</div>
-		</div>
 	</nav>
 	<div class="container">
 		<div class="row">

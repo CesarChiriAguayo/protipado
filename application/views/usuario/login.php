@@ -20,6 +20,7 @@ switch ($msg) {
 <div class="col-md-6">
 <div class="contenedorLogin">
 		<h3>INICIAR SESIÓN</h3>
+		<?php echo validation_errors(); ?>
 		<!--<form role="form" name="login" action=<?php echo base_url('Login/ValidarUser'); ?> method="post">-->
 		<?php echo form_open_multipart('Login/ValidarUser', "autocomplete='off' name='login'"); ?>
 		  <div class="form-group">
@@ -29,7 +30,6 @@ switch ($msg) {
 		  <div class="form-group">
 		    <label for="password">Contrase&ntilde;a</label>
 		    <input type="password" class="form-control" id="password" name="password" placeholder="Contrase&ntilde;a" autocomplete="off">
-			<p><?php echo form_error('password'); ?></p>
 		  </div>
 
 		  <button type="submit" class="btn btn-warning">Acceder</button>

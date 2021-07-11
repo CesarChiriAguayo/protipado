@@ -2,9 +2,27 @@
 class Login extends CI_Controller{
     public function index(){
         $data['msg']=$this->uri->segment(3);
-        if($this->session->userdata('login'))
+        if($this->session->userdata('idusuario'))
         {
             redirect('usuario/config','refresh');
+        }
+        else
+        {
+            $this->load->helper('form');
+            $this->load->view("encabezado");
+            $this->load->view("usuario/login",$data);
+            $this->load->view("pie");
+        }
+    }
+
+    public function editarUsuario(){
+        if($this->session->userdata('idusuario'))
+        {
+            $datos['consulta']=$this->UsuarioModel->CargarEditar();
+            $this->load->helper('form');
+            $this->load->view("encabezado");
+            $this->load->view("usuario/edit",$datos);
+            $this->load->view("pie");
         }
         else
         {
@@ -20,15 +38,20 @@ class Login extends CI_Controller{
         $this->load->library('form_validation');
         $login=$_POST['username'];
         $password=$_POST['password'];
-        $this->form_validation->set_rules('username', 'username', 'required'); 
-        $this->form_validation->set_rules('password', 'password', 'required');
+        $this->form_validation->set_rules('username', 'Usuario', 'required'); 
+        $this->form_validation->set_rules('password', 'Contraseña', 'required');
+        $this->form_validation->set_message('required', 'Debe llenar el campo %s');
         $password=md5($password);
 
-        if ($this->form_validation== FALSE)
+        if ($this->form_validation->run()== FALSE)
         {
-            redirect('login/index/4','refresh');
+            //redirect('login/index/4','refresh');
+            //$data['msg']=$this->uri->segment(3);
+            //$this->load->view('usuario/login',$data);
+            $this->index();
         }
         else
+        {
             $consulta=$this->UsuarioModel->ValidarInicio($login,$password);
             if($consulta->num_rows()>0)
             {
@@ -43,6 +66,7 @@ class Login extends CI_Controller{
             {
                 redirect('login/index/1','refresh');
             }
+        }
     }
 
     public function inicio(){
@@ -72,8 +96,46 @@ class Login extends CI_Controller{
         redirect('login/index/3','refresh');
     }
 
+    public function registrar(){
+        $this->load->helper('form');
+        $this->load->view("encabezado");
+        $this->load->view("usuario/register");
+        $this->load->view("pie");
+    }
+
     public function registrarUsuario(){
-        
+        $this->load->library('form_validation');
+        $login=$_POST['username'];
+        $fullname=$_POST['fullname'];
+        $email=$_POST['email'];
+        $phone=$_POST['phone'];
+        $birthday=$_POST['birthday'];
+        $gender=$_POST['gender'];
+        $password=$_POST['password'];
+        $confirm_password=$_POST['confirm_password'];
+        $this->form_validation->set_rules('username','Nombre de Usuario','trim|required|min_length[3]');
+        $this->form_validation->set_rules('fullname','Nombre completo','trim|required|min_length[3]');
+        $this->form_validation->set_rules('email','Correo Electronico','trim|required|valid_email');
+        $this->form_validation->set_rules('password', 'Contraseña', 'required');
+        $this->form_validation->set_rules('phone','Telefono/Celular','required');
+        $this->form_validation->set_rules('birthday','Fecha de Nacimiento','required');
+        $this->form_validation->set_rules('gender','Genero','required');
+        $this->form_validation->set_rules('confirm_password', 'Confirm Password', 'required|matches[password]');
+        $this->form_validation->set_message('required', 'Debe llenar el campo %s');
+        $this->form_validation->set_message('min_length[3]', 'El campo %s debe tener un minimo de 3 letras');
+        $this->form_validation->set_message('valid_email', 'El campo %s no es valido');
+        $this->form_validation->set_message('matches[password]', 'La contrasña no coincide');
+        $password=md5($password);
+
+        if ($this->form_validation->run()== FALSE)
+        {
+            $this->Registrar();
+        }
+        else
+        {
+            $consulta=$this->UsuarioModel->RegistrarUsuario($login,$fullname,$email,$phone,$birthday,$gender,$password);
+            redirect('login/index','refresh');
+        }
     }
 
 }

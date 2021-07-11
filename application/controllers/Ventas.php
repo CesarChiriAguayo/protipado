@@ -8,11 +8,11 @@ class Ventas extends CI_Controller{
         $this->load->library("session");
         #$this->load->helper('login');
     }
+    
     public function index(){
-        #isLogin();
         $this->load->view("encabezado");
-        if(! $this->session->userdata('id')){
-            $this->load->view("inicio");}
+        if(! $this->session->userdata('idusuario')){
+            $this->load->view("login");}
         else {
             $ventasRealizadas = $this->VentaModel->todas();
             $datos = array("ventas" => $ventasRealizadas);
