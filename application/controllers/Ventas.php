@@ -1,18 +1,24 @@
 <?php
+defined('BASEPATH') OR exit('access denied');
 class Ventas extends CI_Controller{
 
     public function __construct(){
         parent::__construct();
         $this->load->model("VentaModel");
         $this->load->library("session");
+        #$this->load->helper('login');
     }
     public function index(){
-        $ventasRealizadas = $this->VentaModel->todas();
-        $datos = array("ventas" => $ventasRealizadas);
-
+        #isLogin();
         $this->load->view("encabezado");
-        $this->load->view("ventas/todas", $datos);
+        if(! $this->session->userdata('id')){
+            $this->load->view("inicio");}
+        else {
+            $ventasRealizadas = $this->VentaModel->todas();
+            $datos = array("ventas" => $ventasRealizadas);
+            $this->load->view("ventas/todas", $datos);}
         $this->load->view("pie");
+        
     }
 
     public function detalle($id){

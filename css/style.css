@@ -1,0 +1,186 @@
+/*Formato a navbar*/
+.btnBucar{
+	background: #ec8205;
+}
+
+/*letra s del logtipo*/
+.letraS{
+	color: #ec8205;
+
+}
+
+/*div del logo principal*/
+.logoPrincipal{
+	padding-top: 50px;
+}
+
+/*div del contenedor de registros*/
+.contenedorRegistro{
+	background: #2194f3;
+	padding: 20px;
+	border-radius: 10px;
+	color: white;
+}
+/*div del contenedor de login*/
+.contenedorLogin{
+	/*background: #343A40;*/
+	background: #2194f3;
+	padding: 20px;
+	border-radius: 10px;
+	color: white;
+}
+
+/*div para menu principal de cursos contactos materiales ajustes*/
+.munuPrincipal{
+	display: flex;
+}
+
+/*cuatro opciones*/
+.op1{
+	background: gray;
+	height: 180px;
+	width: 180px;
+	border-radius: 10px;
+	padding: 20px;
+	margin: 10px;
+}
+
+/*estilo al nombre de las 4 opciones*/
+.nombreOpcion{
+	color: white;
+	font-size: 25px;
+	text-decoration-color: red;
+}
+
+/*Contenedor de imagen de la pagina de los 4 opciones*/
+.contenedorImagen{
+
+}
+.imgenEscuela{
+	margin-top: 10px;
+	height: 300px;
+}
+
+/*Esto es el texto frase de la pantalla de opciones*/
+.textoFrase{
+	text-align: justify;
+}
+
+
+/*Esta seccion pertenece al formato de de formulario de contactos*/
+.contact{
+		padding: 4%;
+		height: 400px;
+	}
+	.col-md-3{
+		background: #ff9b00;
+		padding: 4%;
+		border-top-left-radius: 0.5rem;
+		border-bottom-left-radius: 0.5rem;
+	}
+	.contact-info{
+		margin-top:10%;
+	}
+	.contact-info img{
+		margin-bottom: 15%;
+	}
+	.contact-info h2{
+		margin-bottom: 10%;
+	}
+	.col-md-9{
+		background: #fff;
+		padding: 3%;
+		border-top-right-radius: 0.5rem;
+		border-bottom-right-radius: 0.5rem;
+	}
+	.contact-form label{
+		font-weight:600;
+	}
+	.contact-form button{
+		background: #25274d;
+		color: #fff;
+		font-weight: 600;
+		width: 25%;
+	}
+	.contact-form button:focus{
+		box-shadow:none;
+	}
+/*Fin de seccion pertenece al formato de de formulario de contactos*/
+
+/*Este es el contenedor de todo el curso*/
+.contenedorCurso{
+}
+/*Formato a cada bloque de los cursos*/
+.curso{
+	background: #343A40;
+	border-radius: 10px 10px 0px 0px;
+}
+.curso1{
+	background: #343A40;
+	border-top: 1px solid gray;
+}
+
+.curso2{
+	background: #495867;
+	border-radius: 0px 0px 10px 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+/*imagen de curso*/
+.imagenCurso{
+	background: white;
+	height: 200px;
+	width: 400px;
+}
+
+/*colores a los textos de titulo*/
+.nombreCurso{
+	color: #669900;
+}
+.aprender{
+	color: white;
+}
+
+.toggle{
+	width: 100%;
+}
+
+
+/*esto es boton requisito*/
+.requisitos{
+	margin-bottom: 10px
+}
+
+/**********************************Materiales*************************************/
+.material{
+	background: #e6e6e6;
+	border-radius: 10px 10px 0px 0px;
+}
+.material1{
+	background: #ccee66;
+	border-top: 1px solid gray;
+	height: 150px;
+}
+.material2{
+	background: #495867;
+	border-radius: 0px 0px 10px 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.nombreMaterial{
+	color: gray;
+}
+/**********************************Materiales*************************************/
+
+
+
+/*requisitos*/
+
+.requisitoscaja{
+	background: #e6e6e6;
+	border-radius: 10px 10px 0px 0px;
+	height: 200px;
+	width: 600x;
+}
+/* fin requisitos*/

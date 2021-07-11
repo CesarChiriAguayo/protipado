@@ -1,0 +1,109 @@
+@import url(https://netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome.css);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
+
+* { -webkit-font-smoothing:antialiased; -moz-font-smoothing:antialiased; -ms-font-smoothing:antialiased; -o-font-smoothing:antialiased; font-smoothing:antialiased; }
+
+.cuerpo{
+  margin:0px;
+  padding:0px;
+	font-family: "Open Sans", arial;
+	background:#e0e0e0;
+	color:#000;
+	/*font-weight:300;*/
+}
+
+h1{
+	font-family: "Open Sans", arial;
+	font-weight:300;
+	float: left;
+	width: 55%;
+	margin-left: 5px;
+	font-size: 40px;
+	margin-bottom: 40px;
+}
+h2{
+	margin:0px;
+	font-family: "Open Sans", arial;
+	font-weight: bold;
+}
+.container2{
+	position: absolute;
+	margin:50px;
+	width: 90%;
+	margin-top: auto;
+	margin-left:10px;
+	-webkit-transform:scale(0.9);
+}
+a.wide, a.box{
+	text-decoration:none;
+	color:#000;
+	-webkit-transition: -webkit-transform 0.1s;
+	position:relative;
+	overflow:hidden;
+}
+
+a.wide h2, a.box h2{
+	position:absolute;
+	bottom:5px;
+	font-size:14px;
+}
+
+a.wide h2.top, a.box h2.top{
+	position:static;
+
+	font-size:14px;
+}
+a.wide i, a.box i{
+font-size: 60px;
+text-align: center;
+display: block;
+margin-top: 10px; /* outside Codepen is actually 30px */
+}
+a.wide:hover, a.box:hover{
+	-webkit-transform: scale(1.05);
+}
+
+a.wide:active, a.box:active{
+	-webkit-transform: scale(1);
+}
+.wide{
+	width:32%;
+	height:200px;
+	overflow:hidden;
+	font-size:13px;
+	padding:10px;
+	display:block;
+	float:left;
+	margin:5px;
+}
+
+.box{
+	width:20%;
+	height:200px;
+	overflow:hidden;
+	font-size:13px;
+	padding:10px;
+	display:block;
+	float:left;
+	margin:5px;
+}
+.lime{background:#61b812;}
+.orange{background:#e76022;}
+.blue{background:#1E90FF;}
+.redgay{background:#DA312E;}
+.yellow{background:#dbb701;}
+.bluefish{background:#02b9e3;}
+.magenta{background:#d22a4e;}
+.homeColor{background:#fff;}
+.black{color:#000;}
+.spacer{
+	width:100%;
+	margin-right: 50px;
+	float:left;
+}
+.logo-imagen{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
