@@ -38,7 +38,7 @@
     					<button class="subnavbtn2">ADMINISTRAR <i class="fa fa-caret-down"></i></button>
     					<div class="subnav-content2">
 							<a href=" <?php echo base_url(); ?>index.php/Login/editarUsuario">Mi Perfil</a>
-							<a href=" <?php echo base_url(); ?>index.php/Login/editarUsuario">Lista de Usuarios</a>
+							<!--<a href=" <?php echo base_url(); ?>index.php/Login/editarUsuario">Lista de Usuarios</a>-->
     					</div>
   					</div>
 					<a class="subnavbtn2 orange" href=" <?php echo base_url(); ?>index.php/Login/cerrarSesion">Cerrar Sesión</a>

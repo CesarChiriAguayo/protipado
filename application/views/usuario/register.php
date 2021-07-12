@@ -45,4 +45,3 @@
 		</form>
 	</div>
 </div>
-<<!--script src=<?php echo base_url('js/valida_registro.js'); ?>></script>-->
